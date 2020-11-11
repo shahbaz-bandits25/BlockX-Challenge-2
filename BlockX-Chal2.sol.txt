@@ -1,0 +1,27 @@
+pragma solidity ^0.6.0;
+
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
+
+contract Chalenge2 is Ownable{
+    
+    uint count;
+    
+    function setCount(uint _inp) public
+    {
+        count = _inp;
+    }
+    
+    function updateCount() public onlyOwner
+    {
+        count++;
+    }
+    
+    function showCount() public view returns(uint)
+    {
+        return count;
+    }
+    
+    
+    
+    
+}
